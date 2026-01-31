@@ -1,0 +1,16 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "types": [
+            "node",
+            "mocha",
+            "chai"
+        ]
+    },
+    "files": [],
+    "include": [
+        "../../custom-typings/*.d.ts",
+        "../custom-typings/*.d.ts",
+        "./**/*.ts"
+    ]
+}

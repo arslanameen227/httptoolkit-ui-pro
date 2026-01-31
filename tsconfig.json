@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "sourceMap": true,
+
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "incremental": true,
+        "skipLibCheck": true,
+        "composite": false,
+
+        "lib": [
+          "dom",
+          "es2020",
+          "ScriptHost",
+          "WebWorker"
+        ],
+
+        // Limit the global types included, to fix https://github.com/DefinitelyTyped/DefinitelyTyped/issues/33015
+        "types": [
+          "node",
+          "webpack-env"
+        ],
+
+        "plugins": [
+          { "name": "typescript-styled-plugin" }
+        ]
+    },
+    "files": [
+      "src/index.tsx"
+    ],
+    "include": [
+      "custom-typings/**/*.d.ts"
+    ],
+    "references": []
+}

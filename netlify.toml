@@ -1,0 +1,15 @@
+[[redirects]]
+    # Rewrite all requests that 404 to /, to support SPA history
+    from = "/*"
+    to = "/"
+    status = 200
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+        Content-Security-Policy = "frame-ancestors 'none'"
+
+[[headers]]
+    for = "/*.wasm"
+    [headers.values]
+        Content-Type = "application/wasm"

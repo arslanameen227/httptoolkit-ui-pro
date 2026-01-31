@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <base href="/" />
+    <link rel='shortcut icon' type='image/x-icon' href='https://httptoolkit.com/favicon.ico' />
+    <meta name="viewport" content="width=device-width">
+    <title>HTTP Toolkit UI Pro</title>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+
+            font-family: "DM Sans", Arial, sans-serif;
+        }
+
+        #app-loading-placeholder {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #app:not(:empty) ~ #app-loading-placeholder { display: none; }
+
+        #initial-logo, #progress-logo {
+            position: absolute;
+            max-width: 80%;
+        }
+
+        #initial-logo {
+            filter: grayscale()
+        }
+
+        #progress-logo {
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 0.2s;
+        }
+
+        #app-loading-error {
+            margin-top: 520px;
+            font-weight: bold;
+            font-size: 40pt;
+            text-align: center;
+        }
+
+        #app-loading-error-details {
+            margin-top: 10px;
+            font-size: 20pt;
+        }
+
+        #app {
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        const bgColor = localStorage.getItem('theme-background-color') || (
+            // Use dark/light theme containerBackground
+            window.matchMedia("(prefers-color-scheme: dark)")
+                ? '#1e2028'
+                : '#e4e8ed'
+        );
+        document.querySelector('html').style.backgroundColor = bgColor;
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id='app-loading-placeholder'>
+      <img src='https://httptoolkit.com/images/logo.svg' alt='HTTP Toolkit Pro' />
+      <img id="progress-logo" src="<%=require('./images/loading-logo.png')%>">
+      <div id="app-loading-error"></div>
+      <div id="app-loading-error-details"></div>
+    </div>
+
+    <script>
+        let progressElement = document.getElementById('progress-logo');
+        let errorElement = document.getElementById('app-loading-error');
+        let errorDetailsElement = document.getElementById('app-loading-error-details');
+
+        let progress = 0;
+        function setProgress(newProgress) {
+            progress = Math.max(progress, newProgress); // Never go backwards!
+            progressElement.style.clipPath = 'inset(0 ' + (100 - progress) + '% 0 0)';
+        }
+
+        setTimeout(function () {
+            let appScript = document.scripts[document.scripts.length - 1];
+
+            setTimeout(() => setProgress(10), 100);
+
+            // Fake page loaded -> script loaded progress, since we're blind here.
+            let initialProgressInterval = setInterval(function () {
+                let newProgress = progress + (50 - progress) / 3;
+                setProgress(newProgress);
+            }, 500);
+
+            // Triggered when script has loaded and starts running
+            document.addEventListener('load:executing', function () {
+                clearInterval(initialProgressInterval);
+                setProgress(60);
+            });
+
+            // Triggered when sync code from script has finished
+            appScript.addEventListener('load', function () {
+                setProgress(75);
+            });
+
+            // Triggered when _everything_ is loaded and run
+            window.addEventListener('load', function () {
+                setProgress(90);
+            });
+
+            // The store & Mockttp setup is done, and React is rendering.
+            document.addEventListener('load:rendering', function () {
+                setProgress(100);
+            });
+
+            document.addEventListener('load:failed', function (evt) {
+                setProgress(100);
+
+                let error = evt.error || {};
+
+                if (error.isTimeout) {
+                    errorElement.innerText = 'This is taking longer than normal...';
+                    errorDetailsElement.innerHTML = 'If this persists or happens often ' +
+                        '<a href="https://github.com/httptoolkit/httptoolkit-ui-pro/issues/new">file an issue</a> ' + 'and help make HTTP Toolkit Pro faster.';
+                } else {
+                    errorElement.innerText = 'Startup failed: "' + error.message + '"';
+                    errorDetailsElement.innerHTML = 'Please ' +
+                        '<a href="https://github.com/httptoolkit/httptoolkit-ui-pro/issues/new">file an issue</a>, ' +
+                        "and we'll get this fixed ASAP";
+                }
+            });
+        }, 0);
+
+        // Tiny polyfill for the only backward compat issue so far with old Electron:
+        if (!window.globalThis) {
+            window.globalThis = window;
+        }
+
+        if (!crypto.randomUUID && crypto.getRandomValues) {
+            // Tiny polyfill using crypto.getRandomValues, available in Chromium 11+ (and
+            // non-secure contexts in later versions, which is sometimes useful)
+            crypto.randomUUID = function() {
+                const bytes = new Uint8Array(16);
+                crypto.getRandomValues(bytes);
+                // Set UUID version & variant:
+                bytes[6] = (bytes[6] & 0x0f) | 0x40;
+                bytes[8] = (bytes[8] & 0x3f) | 0x80;
+                const hex = Array.from(bytes, byte => {
+                    return ('0' + byte.toString(16)).slice(-2);
+                }).join('');
+
+                return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20, 32)}`;
+            };
+        }
+
+        window.addEventListener('error', (error) => {
+            // If we hit an uncaught syntax error before the app loads, we assume this is a *very*
+            // old desktop version, which can't even parse the current code (including its desktop
+            // version check warning) and so we just show the warning by default
+            if ((error.error || error) instanceof SyntaxError && progress < 100) {
+                console.log('Syntax error:', error);
+                document.dispatchEvent(Object.assign(new Event('load:failed'), {
+                    error: new Error('Syntax compatibility error')
+                }));
+
+                alert(
+                    "HTTP Toolkit is failing to start, due to an unknown significant compatibility error." +
+                    "\n\n" +
+                    "This may mean your HTTP Toolkit installation is very outdated and requires a manual " +
+                    "update to continue working. Please try reinstalling the app from httptoolkit.com." +
+                    "\n\n" +
+                    "If that doesn't work, please report this bug at github.com/httptoolkit/httptoolkit-ui-pro to " +
+                    "get more help."
+                );
+            }
+        });
+    </script>
+  </body>
+</html>
