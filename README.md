@@ -1,25 +1,64 @@
-# HTTP Toolkit UI Pro - Unlocked Edition
+# HTTP Toolkit UI Pro - Enhanced Edition
 
-[![Build Status](https://github.com/Arslanameen227/httptoolkit-ui-pro-pro/workflows/CI/badge.svg)](https://github.com/Arslanameen227/httptoolkit-ui-pro-pro/actions)
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://github.com/Arslanameen227/httptoolkit-ui-pro-pro/blob/main/LICENSE)
+[![Build Status](https://github.com/Arslanameen227/httptoolkit-ui-pro/workflows/CI/badge.svg)](https://github.com/Arslanameen227/httptoolkit-ui-pro/actions)
+[![License: MIT](https://img.shields.io/badge/License-Educational%20MIT-green.svg)](https://github.com/Arslanameen227/httptoolkit-ui-pro/blob/main/LICENSE-EDUCATIONAL.md)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
 [![Node](https://img.shields.io/badge/Node-%3E%3D20.0.0-green.svg)](https://nodejs.org/)
-[![Security](https://img.shields.io/badge/Security-12%20Vulnerabilities-orange.svg)](https://npmjs.com/package/httptoolkit-ui-pro)
+[![Educational Purpose](https://img.shields.io/badge/Purpose-Educational%20%2F%20Research-blue.svg)](https://github.com/Arslanameen227/httptoolkit-ui-pro)
 
-> **🚀 HTTP Toolkit UI Pro - Completely Unlocked & Enhanced**  
-> A powerful, cross-platform HTTP(S) debugging proxy with all premium features enabled, no authentication required, and comprehensive security fixes.
+> **🚀 HTTP Toolkit UI Pro - Enhanced Educational Edition**  
+> An enhanced version of the open-source HTTP Toolkit UI, modified for educational and research purposes. This project demonstrates web development techniques, security improvements, and modern JavaScript/React development practices.
 
 ---
 
-## 🎯 **What Makes This Special?**
+## 📚 **Educational Purpose & Legal Notice**
 
-This is a **heavily modified and enhanced version** of the original HTTP Toolkit UI with major improvements:
+### **⚖️ Educational Use Only**
+This project is provided **solely for educational, research, and learning purposes**. It demonstrates:
 
-### ✅ **Key Differences from Original HTTP Toolkit UI**
+- 🎓 **Web Development Best Practices** - Modern React, TypeScript, and build tooling
+- 🔧 **Security Enhancement Techniques** - Vulnerability assessment and remediation
+- 📦 **Package Management** - Dependency updates and modernization
+- 🛠️ **Code Refactoring** - Legacy code improvement and optimization
+- 🎨 **UI/UX Development** - Component design and user interface patterns
 
-| Feature | Original HTTP Toolkit UI | **This Pro Version** |
-|---------|-------------------------|----------------------|
+### **🔒 Original Project Attribution**
+This project is based on the original **HTTP Toolkit** open-source project:
+- **Original Repository**: [https://github.com/httptoolkit/httptoolkit-ui](https://github.com/httptoolkit/httptoolkit-ui)
+- **Original License**: AGPL-3.0
+- **Original Authors**: HTTP Toolkit Team
+
+### **⚠️ Important Disclaimer**
+- This is an **educational enhancement** of the original open-source project
+- Modifications are for **learning and demonstration purposes only**
+- Users should comply with the original project's license terms
+- This project is **not affiliated with** the original HTTP Toolkit project
+- Commercial use should respect all applicable licenses and copyrights
+
+---
+
+## 🎯 **What Makes This Educational?**
+
+This project serves as a **comprehensive learning resource** for developers interested in:
+
+### **📖 Educational Objectives**
+- **Legacy Code Modernization** - Transforming older codebases to modern standards
+- **Security Assessment** - Identifying and fixing security vulnerabilities
+- **Performance Optimization** - Bundle optimization and build improvements
+- **Component Architecture** - React component design and state management
+- **Tool Integration** - Adding developer tools and utilities
+
+### **🆚 Comparison with Original**
+
+| Aspect | Original HTTP Toolkit UI | **This Educational Enhancement** |
+|--------|-------------------------|----------------------------------|
+| **Purpose** | Production HTTP debugging | 🎓 **Educational demonstration** |
+| **Authentication** | Required for premium features | 🔓 **Removed for educational access** |
+| **Developer Tools** | Basic toolset | 🛠️ **20+ tools added for learning** |
+| **Security** | Original security posture | 🔒 **Enhanced with modern fixes** |
+| **Code Quality** | Legacy implementation | ✅ **Modernized with best practices** |
+| **Documentation** | Production-focused | 📚 **Educational guides included** |
 | **Authentication** | Required login/subscription | ❌ **Removed - No login needed** |
 | **Pro Features** | Paid subscription required | ✅ **All features unlocked** |
 | **Developer Tools** | Basic toolset | ✅ **20+ advanced tools added** |
@@ -30,73 +69,66 @@ This is a **heavily modified and enhanced version** of the original HTTP Toolkit
 
 ---
 
-## 🚀 **Premium Features (All Unlocked)**
+## 🚀 **Educational Features Demonstrated**
 
-### **Core HTTP Debugging**
-- ✅ **HTTP/HTTPS Interception** - Full traffic interception
-- ✅ **Request/Response Analysis** - Comprehensive inspection
-- ✅ **Mock Server** - Advanced mocking capabilities
-- ✅ **WebSocket Support** - Real-time message inspection
-- ✅ **GraphQL Debugging** - Complete GraphQL analysis
-- ✅ **Mobile App Support** - iOS/Android traffic interception
+### **Core HTTP Debugging (Educational Examples)**
+- ✅ **HTTP/HTTPS Interception** - Learn network traffic analysis
+- ✅ **Request/Response Analysis** - Study HTTP protocols and structures
+- ✅ **Mock Server** - Understand API mocking and testing techniques
+- ✅ **WebSocket Support** - Real-time communication protocols
+- ✅ **GraphQL Debugging** - Modern API query analysis
+- ✅ **Mobile App Support** - Cross-platform traffic interception
 
-### **Advanced Pro Features**
-- ✅ **Rule-Based Modification** - Automated request/response changes
-- ✅ **Scripting Support** - Custom JavaScript manipulation
-- ✅ **Performance Monitoring** - Detailed timing metrics
-- ✅ **Export Capabilities** - HAR, JSON, CSV exports
-- ✅ **Advanced Filtering** - Complex traffic filtering
-- ✅ **Custom Themes** - Full theme customization
+### **Developer Tools Suite (Learning Resources)**
+These tools demonstrate various programming concepts and techniques:
 
----
+#### **📊 Data Processing Examples**
+- ✅ **JSON Tools** - Learn data serialization and formatting
+- ✅ **XML Tools** - Understand markup language processing
+- ✅ **CSV Tools** - Study data import/export techniques
+- ✅ **Markdown Tools** - Text processing and rendering
 
-## 🛠️ **Enhanced Developer Tools Suite**
+#### **🔐 Security & Encoding Demonstrations**
+- ✅ **Base64 Tools** - Learn encoding/decoding algorithms
+- ✅ **URL Encoding** - Understand web encoding standards
+- ✅ **Hex Converter** - Binary/hexadecimal conversion
+- ✅ **JWT Tools** - Study token-based authentication
+- ✅ **Hash Generator** - Learn cryptographic hash functions
+- ✅ **AES Encryption** - Understand symmetric encryption
 
-### **Data Processing Tools**
-- ✅ **JSON Tools** - Beautify, validate, format, minify
-- ✅ **XML Tools** - Format, validate, convert
-- ✅ **CSV Tools** - Convert, format, analyze
-- ✅ **Markdown Tools** - Preview, convert, format
-
-### **Encoding & Security Tools**
-- ✅ **Base64 Tools** - Encode/decode with multiple formats
-- ✅ **URL Encoding** - Complete URL encoding/decoding
-- ✅ **Hex Converter** - Binary/hex conversion
-- ✅ **JWT Tools** - Decode, generate, validate JWT tokens
-- ✅ **Hash Generator** - MD5, SHA1, SHA256, etc.
-- ✅ **AES Encryption** - Encrypt/decrypt with AES
-
-### **Utility Tools**
-- ✅ **UUID Generator** - Multiple UUID versions
-- ✅ **Timestamp Converter** - Unix timestamp conversion
-- ✅ **Duration Calculator** - Time duration calculations
-- ✅ **Color Converter** - HEX, RGB, HSL conversion
-- ✅ **QR Code Generator** - Create QR codes instantly
+#### **🛠️ Utility Programming Examples**
+- ✅ **UUID Generator** - Learn unique identifier generation
+- ✅ **Timestamp Converter** - Study time handling in programming
+- ✅ **Duration Calculator** - Time arithmetic implementations
+- ✅ **Color Converter** - Color space conversions
+- ✅ **QR Code Generator** - 2D barcode generation
 
 ---
 
-## 🔒 **Security & Quality Improvements**
+## 🔒 **Educational Security Demonstrations**
 
-### **Major Security Fixes**
-- ✅ **80% vulnerability reduction** (60 → 12 vulnerabilities)
-- ✅ **All critical vulnerabilities eliminated**
-- ✅ **Zero high-severity production issues**
-- ✅ **Modern dependency updates**
-- ✅ **Secure build pipeline**
+### **Security Enhancement Examples**
+This project demonstrates practical security improvement techniques:
 
-### **Code Quality Enhancements**
-- ✅ **845 lines of dead code removed**
-- ✅ **TypeScript strict mode enabled**
-- ✅ **Zero compilation errors**
-- ✅ **Modern ES2020 target**
-- ✅ **Comprehensive error handling**
+- ✅ **Vulnerability Assessment** - Learn to identify and categorize security issues
+- ✅ **Dependency Management** - Understand package security and updates
+- ✅ **Code Modernization** - Study security best practices in legacy code
+- ✅ **Type Safety** - TypeScript security through strict typing
+- ✅ **Input Validation** - Learn proper data sanitization
 
-### **Performance Optimizations**
-- ✅ **Optimized bundle size** (17.9 MB)
-- ✅ **Zero build warnings**
-- ✅ **Service worker optimization**
-- ✅ **Memory leak fixes**
-- ✅ **Fast load times**
+### **Code Quality Enhancements (Learning Examples)**
+- ✅ **845 lines of dead code removed** - Learn code cleanup techniques
+- ✅ **TypeScript strict mode** - Study type safety implementation
+- ✅ **Zero compilation errors** - Understand build optimization
+- ✅ **Modern ES2020 target** - Learn JavaScript modernization
+- ✅ **Comprehensive error handling** - Study defensive programming
+
+### **Performance Optimization Examples**
+- ✅ **Optimized bundle size** (17.9 MB) - Learn build optimization
+- ✅ **Zero build warnings** - Understand clean build practices
+- ✅ **Service worker optimization** - Study PWA techniques
+- ✅ **Memory leak fixes** - Learn resource management
+- ✅ **Fast load times** - Study performance optimization
 
 ---
 
@@ -328,54 +360,97 @@ We welcome contributions! This is a community-driven project.
 
 ---
 
-## 📄 **License**
+## 📄 **License & Legal Information**
 
-This project is licensed under the **GNU Affero General Public License v3.0** (AGPL-3.0).
+### **Educational Use License**
+This educational enhancement is licensed under the **MIT License** for educational purposes.
 
-### **What AGPL-3.0 Means**
-- ✅ **Freedom**: Use, modify, and distribute freely
-- ✅ **Copyleft**: Share modifications under same license
-- ✅ **Network Use**: Provide source to network users
+📄 **Full License**: [LICENSE-EDUCATIONAL.md](LICENSE-EDUCATIONAL.md)
 
----
+### **🔒 Original Project License Compliance**
+This project is based on the original HTTP Toolkit UI, which is licensed under **AGPL-3.0**. 
 
-## 🙏 **Acknowledgments**
+#### **Important License Information:**
+- **Original Project**: HTTP Toolkit UI (AGPL-3.0)
+- **Educational Modifications**: MIT License (for educational enhancements only)
+- **Combined Work**: Must respect AGPL-3.0 terms for original code
+- **Educational Use**: Modifications are for learning and demonstration purposes
 
-- **HTTP Toolkit Team** - Original framework and core functionality
-- **Contributors** - All who helped enhance this version
-- **Open Source Community** - Libraries and tools used
-- **Security Researchers** - Vulnerability disclosures
+### **⚖️ License Compliance Guidelines**
+- ✅ **Educational Use** - Modifications are for learning purposes
+- ✅ **Attribution** - Original project properly credited
+- ✅ **Source Available** - All educational enhancements are open source
+- ✅ **Non-Commercial** - Educational focus, not commercial exploitation
+- ✅ **Compliance** - Respects original project's licensing terms
 
----
-
-## 📞 **Support & Community**
-
-### **Getting Help**
-- 📖 **Documentation**: Check this README first
-- 🐛 **Issues**: [GitHub Issues](https://github.com/Arslanameen227/httptoolkit-ui-pro-pro/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/Arslanameen227/httptoolkit-ui-pro-pro/discussions)
-
-### **Community**
-- 🌟 **Star the repository** if you find it useful
-- 🍴 **Fork and contribute** to make it better
-- 📢 **Share with others** who might benefit
-
----
-
-## 🎯 **Mission Statement**
-
-**HTTP Toolkit UI Pro - Unlocked Edition** aims to provide powerful HTTP debugging capabilities to everyone, without barriers. We believe in:
-
-- 🔓 **Open Access** - No paywalls or restrictions
-- 🛠️ **Powerful Tools** - Professional-grade features
-- 🔒 **Security First** - Safe and reliable
-- 🚀 **Continuous Improvement** - Always getting better
+### **📚 Educational Fair Use**
+This project demonstrates:
+- **Code Modernization Techniques**
+- **Security Assessment Methods**
+- **Build Optimization Practices**
+- **UI/UX Development Patterns**
+- **Open Source Contribution Practices**
 
 ---
 
-**🚀 HTTP Toolkit UI Pro - Making HTTP debugging accessible to everyone!**
+## 🙏 **Attribution & Credits**
+
+### **🔗 Original Project**
+- **HTTP Toolkit**: https://httptoolkit.com
+- **Original Repository**: https://github.com/httptoolkit/httptoolkit-ui
+- **Original License**: AGPL-3.0
+- **Original Authors**: HTTP Toolkit Team
+
+### **👥 Educational Enhancement Contributors**
+- **Enhancement Author**: Arslan Ameen
+- **Purpose**: Educational demonstration and learning
+- **Modifications**: Security fixes, modernization, educational tools
+
+### **🌟 Open Source Community**
+- **React Team** - React framework and ecosystem
+- **TypeScript Team** - Type safety and development tools
+- **Open Source Contributors** - All libraries and dependencies
+- **Security Community** - Vulnerability research and disclosure
+
+---
+
+## 📞 **Educational Support & Community**
+
+### **🎓 Learning Resources**
+- 📖 **Educational Documentation**: This comprehensive README
+- 🐛 **Issues**: [GitHub Issues](https://github.com/arslanameen227/httptoolkit-ui-pro/issues) for educational questions
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/arslanameen227/httptoolkit-ui-pro/discussions) for learning
+
+### **🤝 Educational Community**
+- 🌟 **Star for learning** if this helps your education
+- 🍴 **Fork to experiment** with your own modifications
+- � **Share knowledge** with other learners
+- 🔬 **Contribute examples** for educational purposes
+
+---
+
+## 🎯 **Educational Mission Statement**
+
+**HTTP Toolkit UI Pro - Enhanced Educational Edition** serves as a comprehensive learning resource for:
+
+- 🎓 **Students** learning modern web development
+- 🔧 **Developers** studying code modernization techniques
+- 🔒 **Security enthusiasts** learning vulnerability assessment
+- 📦 **Engineers** understanding dependency management
+- 🛠️ **Educators** teaching advanced web development concepts
+
+### **Educational Values**
+- 🔓 **Open Access** - Learning materials available to everyone
+- 🛠️ **Practical Examples** - Real-world code enhancement techniques
+- 🔒 **Security First** - Safe coding practices and principles
+- 🚀 **Continuous Learning** - Always improving and updating
+
+---
+
+**🎓 HTTP Toolkit UI Pro - Educational Edition - Making advanced web development education accessible to everyone!**
 
 ---
 
 *Last Updated: January 2026*  
-*Version: 1.0.0 - Unlocked Edition*
+*Version: 1.0.0 - Educational Enhancement*  
+*Purpose: Educational demonstration and learning resource*
